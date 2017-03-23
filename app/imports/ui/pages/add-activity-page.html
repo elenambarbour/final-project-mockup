@@ -1,0 +1,17 @@
+<template name="Add_Activity_Page">
+  <div style="margin-top: 20px" class="ui container">
+    <form class="ui form activity-data-form {{ errorClass }}">
+      <h4 class="ui dividing header">Add Activity </h4>
+      <div class="field">
+        <div class="two fields">
+          {{> Text_Form_Control label="Title" required=true errorMessage=(fieldError "title")}}
+          {{> Text_Form_Control label="Place" required=true errorMessage=(fieldError "place")}}
+        </div>
+      </div>
+      <div class="field">
+        {{> Text_Form_Control label="Level" required=true errorMessage=(fieldError "level")}}
+      </div>
+      <button class="ui button" type="submit">Submit</button>
+    </form>
+  </div>
+</template>

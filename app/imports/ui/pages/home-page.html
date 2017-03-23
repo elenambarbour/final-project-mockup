@@ -2,25 +2,11 @@
   <div class="ui container">
 
     {{#if Template.subscriptionsReady}}
-      <table style="margin-top: 20px" class="ui celled table">
-        <thead>
-        <tr>
-          <th>Title</th>
-          <th>Place</th>
-          <th>Level</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        {{#each activity in activityList}}
-          <tr>
-            <td>{{activity.title}}</td>
-            <td>{{activity.place}}</td>
-            <td>{{activity.level}}</td>
-          </tr>
-        {{/each}}
-        </tbody>
-      </table>
+<div style="margin-top: 25px; margin-bottom: 25px"  class="ui center aligned container"><h3>Activity of the Week!</h3>
+      <a href="/list-activity" class="ui center aligned medium image">
+        <img src="/images/headerpic.jpg">
+        The Wonderous World of Hiking in Manoa Valleys
+      </a></div>
     {{else}}
       {{> Loading}}
     {{/if}}

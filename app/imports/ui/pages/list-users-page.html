@@ -1,6 +1,14 @@
 <template name="List_Users_Page">
+
   <div style="margin-left: 75px" class="ui list">
     {{#if Template.subscriptionsReady}}
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search users ....">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
       {{#each user in usersList}}
         <div style="margin: 10px" class="item">
           <img class="ui avatar image" src="/images/ninj-avatar.png">
@@ -12,9 +20,9 @@
             </div>
             <div class="meta">
               <span class="area"><a>{{user.area}}</a></span>
-              <span style="" class="level">{{user.level}}</span>
+              <span class="ui right aligned level">{{user.level}}</span>
             </div>
-            <div class="description">Last seen hiking <b>Diamond Head</b>just now.</div>
+            <div class="description">Last seen hiking <b>Diamond Head</b> just now.</div>
           </div>
         </div>
       {{/each}}

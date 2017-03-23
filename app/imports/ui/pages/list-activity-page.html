@@ -1,6 +1,13 @@
 <template name="List_Activity_Page">
   <div style="margin-left: 75px" class="ui items">
     {{#if Template.subscriptionsReady}}
+      <div class="ui search">
+        <div class="ui icon input">
+          <input class="prompt" type="text" placeholder="Search places ...">
+          <i class="search icon"></i>
+        </div>
+        <div class="results"></div>
+      </div>
       {{#each activity in activityList}}
         <div class="item">
           <div class="ui small image">

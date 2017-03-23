@@ -17,3 +17,6 @@ import './list-place-page.js';
 
 import './list-users-page.html';
 import './list-users-page.js';
+
+import './add-activity-page.html';
+import './add-activity-page.js';

@@ -43,6 +43,13 @@ FlowRouter.route('/list-users', {
   },
 });
 
+FlowRouter.route('/add-activity', {
+  name: 'Add_Activity_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Add_Activity_Page' });
+  },
+});
+
 FlowRouter.route('/stuff/:_id', {
   name: 'Edit_Stuff_Page',
   action() {
