@@ -1,14 +1,28 @@
 <template name="Home_Page">
-  <div class="ui middle aligned centered grid text container">
+  <div class="ui container">
 
-    <div class="four wide column">
-      <img class="ui small circular image" src="/images/meteor-logo.png"/>
-    </div>
+    {{#if Template.subscriptionsReady}}
+      <table style="margin-top: 20px" class="ui celled table">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Place</th>
+          <th>Level</th>
+        </tr>
+        </thead>
 
-    <div class="eight wide column">
-      <h1>Welcome to this template</h1>
-      <p>Now get to work and modify this app!</p>
-    </div>
-
+        <tbody>
+        {{#each activity in activityList}}
+          <tr>
+            <td>{{activity.title}}</td>
+            <td>{{activity.place}}</td>
+            <td>{{activity.level}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    {{else}}
+      {{> Loading}}
+    {{/if}}
   </div>
 </template>

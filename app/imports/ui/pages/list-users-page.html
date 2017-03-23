@@ -1,0 +1,27 @@
+<template name="List_Users_Page">
+  <div style="margin-left: 75px" class="ui list">
+    {{#if Template.subscriptionsReady}}
+      {{#each user in usersList}}
+        <div style="margin: 10px" class="item">
+          <img class="ui avatar image" src="/images/ninj-avatar.png">
+          <div class="content">
+
+            <div class="header">
+              {{user.first}}
+              {{user.last}}
+            </div>
+            <div class="meta">
+              <span class="area"><a>{{user.area}}</a></span>
+              <span style="" class="level">{{user.level}}</span>
+            </div>
+            <div class="description">Last seen hiking <b>Diamond Head</b>just now.</div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      {{> Loading}}
+    {{/if}}
+  </div>
+</template>
+
+

@@ -1,0 +1,29 @@
+<template name="List_Place_Page">
+  <div style="margin-left: 75px" class="ui items">
+    {{#if Template.subscriptionsReady}}
+      {{#each place in placeList}}
+        <div class="item">
+          <div class="ui small image">
+            <img src="/images/headerpic.jpg">
+          </div>
+          <div class="content">
+
+            <div class="header">{{place.area}}
+            </div>
+            <div class="meta">
+              <span class="temperature">{{place.temperature}}</span>
+              <span class="weather">{{place.weather}}</span>
+            </div>
+            <div class="description">
+              <p>Short description of the place</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      {{> Loading}}
+    {{/if}}
+  </div>
+</template>
+
+

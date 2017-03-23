@@ -8,3 +8,12 @@ import './home-page.html';
 
 import './list-stuff-page.html';
 import './list-stuff-page.js';
+
+import './list-activity-page.html';
+import './list-activity-page.js';
+
+import './list-place-page.html';
+import './list-place-page.js';
+
+import './list-users-page.html';
+import './list-users-page.js';

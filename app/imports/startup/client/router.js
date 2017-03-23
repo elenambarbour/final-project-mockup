@@ -22,6 +22,27 @@ FlowRouter.route('/add', {
   },
 });
 
+FlowRouter.route('/list-activity', {
+  name: 'List_Activity_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'List_Activity_Page' });
+  },
+});
+
+FlowRouter.route('/list-place', {
+  name: 'List_Place_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'List_Place_Page' });
+  },
+});
+
+FlowRouter.route('/list-users', {
+  name: 'List_Users_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'List_Users_Page' });
+  },
+});
+
 FlowRouter.route('/stuff/:_id', {
   name: 'Edit_Stuff_Page',
   action() {

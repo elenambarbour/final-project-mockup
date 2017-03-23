@@ -1,0 +1,29 @@
+<template name="List_Activity_Page">
+  <div style="margin-left: 75px" class="ui items">
+    {{#if Template.subscriptionsReady}}
+      {{#each activity in activityList}}
+        <div class="item">
+          <div class="ui small image">
+            <img src="/images/headerpic.jpg">
+          </div>
+          <div class="content">
+
+            <div class="header">{{activity.title}}
+            </div>
+            <div class="meta">
+              <span class="place">{{activity.place}}</span>
+              <span class="level">{{activity.level}}</span>
+            </div>
+            <div class="description">
+              <p>Short Description of the hike</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      {{> Loading}}
+    {{/if}}
+  </div>
+</template>
+
+
